@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(images/Background/BACKGROUND_IMG_MALAB_LAND_PAGE.jpg);
+    background-size: 290%;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: #23231fbb;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #23231F;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+span {
+    color: #008035;
+}
+
+.brand h1 {
+    font-size: 2rem;
+    color: #FFFFFF;
+}
+
+
+/* HEADER NAVBAR */
+
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+
+#header .header {
+    min-height: 70px;
+    background-color: #FFFFFF;
+}
+
+#header .brand h1 {
+    color: #23231F;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-left: 20px;
+}
+
+#header .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+
+#header .navlist ul {
+    list-style: none;
+    position: absolute;
+    background-color: #23231fc9;
+    border-bottom-left-radius: 10px;
+    width: 50vw;
+    height: 70vw;
+    left: 100%;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .4s ease left;
+}
+
+#header .navlist ul.active {
+    top: 70px;
+    left: 250px;
+}
+
+#header .navlist ul a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: .2rem;
+    text-transform: none;
+    color: #FFFFFF;
+    padding: 20px;
+    display: block;
+}
+
+#header .navlist ul a:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #23231ffd;
+    font-size: 15rem;
+    letter-spacing: 50px;
+    z-index: 1;
+}
+
+#header .navlist ul a:hover {
+    border-bottom: 2px #008035 solid;
+}
+
+#header .burger {
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    display: inline-block;
+    border: 3px solid #008035;
+    border-radius: 20%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(.8);
+}
+
+#header .burger .bar {
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: #008035;
+    z-index: -1;
+}
+
+#header .burger .bar::after,
+#header .burger .bar::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: #008035;
+    transition: .3s ease;
+    transition-property: top, bottom;
+}
+
+#header .burger .bar::after {
+    top: 8px;
+}
+
+#header .burger .bar::before {
+    bottom: 8px;
+}
+
+#header .burger.active .bar:before {
+    bottom: 0;
+}
+
+#header .burger.active .bar::after {
+    top: 0;
+}
+
+#header .brand h1 {
+    color: #23231F;
+    font-size: 2rem;
+}
+
+
+/* HEADER NAVBAR END */
+
+
+/* HOME PAGE */
+
+#homepage .homepage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#homepage h1 {
+    display: block;
+    width: fit-content;
+    font-size: 3rem;
+    position: relative;
+    color: #FFFFFF;
+    margin: 0 150px 0 0px;
+}
+
+#homepage .cta {
+    display: inline-block;
+    border-radius: 10px;
+    margin: 0 0;
+    padding: 10px 13px;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 2px solid #008035;
+    font-size: 2rem;
+    margin-top: 10px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+#homepage .cta:hover {
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #008035;
+}
+
+
+/* HOME PAGE END */
+
+
+/* SERVICES PAGE */
+
+#services {
+    background-color: #FFFFFF;
+}
+
+#services .service-top h1 {
+    margin-top: 30px;
+}
+
+#services .services {
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+#services .section-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #23231F;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+#services .service-top {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+#services .service-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#services .service-item {
+    flex-basis: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background-color: #008035;
+    background-size: cover;
+    margin: 10px 5%;
+    width: 400px;
+    height: 300px;
+}
+
+#services .service-bottom .icon {
+    height: 60px;
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+#services .service-item h2 {
+    font-size: 2rem;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#services .service-item p {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+
+
+/* SERVICES PAGE END */
+
+
+/* ABOUT US PAGE */
+
+#aboutus .aboutus {
+    background-color: #23231F;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+#aboutus .aboutus-header h1 {
+    margin-top: 30px;
+    color: #008035;
+}
+
+#aboutus .all-aboutus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#aboutus .aboutus-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#aboutus .aboutus-info {
+    padding: 0;
+    flex-basis: 50%;
+    color: #FFFFFF;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #23231F;
+}
+
+#aboutus .aboutus-info h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+#aboutus .aboutus-info p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    line-height: 3rem;
+    text-align: left;
+}
+
+#aboutus .aboutus-img {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 50px;
+    border-radius: 20px;
+}
+
+
+/* ABOUT US PAGE END */
+
+
+/* CONTACT US PAGE */
+
+#contactus .section-title {
+    color: #FFFFFF;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+#contactus .contactus {
+    background-color: transparent;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+#contactus .contactus-info {
+    color: #FFFFFF;
+    margin: 100px auto;
+    font-size: 20px;
+    text-align: left;
+}
+
+
+/* CONTACT US PAGE END */
+
+
+/* FOOTER */
+
+#footer {
+    background-color: #23231F;
+}
+
+#footer .footer {
+    min-height: 200px;
+    flex-direction: column;
+    padding: 50px;
+    padding-bottom: 10px;
+}
+
+#footer h2 {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer p {
+    color: #FFFFFF;
+}
+
+
+/* FOOTER END */
+
+
+/* TABLET MEDIA QUERY */
+
+@media(min-width:768px) {
+    body {
+        background-image: url(images/Background/BACKGROUND_IMG_MALAB_LAND_PAGE.jpg);
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+        z-index: 1;
+    }
+    /* NAVBAR */
+    #header .brand h1 {
+        color: #23231F;
+        font-weight: bold;
+        font-size: 3rem;
+        margin-left: 20px;
+    }
+    /* HOME PAGE */
+    #homepage h1 {
+        font-size: 4rem;
+        margin: 0 150px 0 0px;
+    }
+    #homepage .cta {
+        margin: 10px 0;
+    }
+    /* SERVICES PAGE */
+    #services .services {
+        padding: 50px 0;
+    }
+    #services .service-item {
+        width: 500px;
+    }
+    /* ABOUT US PAGE */
+    #aboutus .aboutus-info h1 {
+        font-size: 4rem;
+        font-weight: 500;
+        margin-left: 60px;
+    }
+    #aboutus .aboutus-info p {
+        margin-left: 60px;
+        text-align: left;
+    }
+    #aboutus .aboutus-img {
+        margin: 0 60px;
+        border-radius: 20px;
+    }
+    /* CONTACT US PAGE */
+    #contactus .contactus {
+        flex-direction: column;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 50px;
+    }
+    #contactus .section-title {
+        color: #FFFFFF;
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+    #contactus .contactus-info {
+        color: #FFFFFF;
+        margin: 100px auto;
+        font-size: 20px;
+        text-align: left;
+    }
+}
+
+
+/* TABLET MEDIA QUERY END */
+
+
+/* PC MEDIA QUERY */
+
+@media(min-width:1200px) {
+    body {
+        background-image: url(images/Background/BACKGROUND_IMG_MALAB_LAND_PAGE.jpg);
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+        z-index: 1;
+    }
+    /* HEADER */
+    #header .burger {
+        display: none;
+    }
+    #header .navlist ul {
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .navlist ul li {
+        display: inline-block;
+    }
+    #header .navlist ul li a {
+        color: #23231F;
+        font-weight: normal;
+        font-size: 1.6rem;
+        letter-spacing: .1rem;
+    }
+    #header .navlist ul a:hover {
+        border-bottom: none;
+        color: #008035;
+        font-weight: bold;
+    }
+    /* NAVBAR */
+    #header .brand h1 {
+        color: #23231F;
+        font-weight: bold;
+        font-size: 3rem;
+    }
+    /* HOME PAGE */
+    #homepage h1 {
+        font-size: 4rem;
+        margin: 0 150px 0 0;
+        padding-right: 500px;
+    }
+    #homepage .cta {
+        margin: 10px 0;
+    }
+    /* SERVICES PAGE */
+    #services .flexbox {
+        display: flex;
+        flex-direction: row;
+    }
+    #services .service-item {
+        width: 400px;
+        height: 90%;
+    }
+    /* ABOUT US PAGE */
+    #aboutus {
+        background-color: #23231F;
+    }
+    #aboutus .aboutus {
+        background-color: #23231F;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 50px 0;
+    }
+    #aboutus .aboutus-header h1 {
+        margin-top: 35px;
+        color: #008035;
+    }
+    #aboutus .all-aboutus {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    #aboutus .aboutus-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    #aboutus .aboutus-info {
+        padding: 0;
+        flex-basis: 50%;
+        color: #FFFFFF;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #23231F;
+    }
+    #aboutus .aboutus-info h1 {
+        font-size: 4rem;
+        font-weight: 500;
+        margin-left: 20px;
+    }
+    #aboutus .aboutus-info p {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin-top: 10px;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-right: 600px;
+        line-height: 3rem;
+        text-align: left;
+    }
+    #aboutus .aboutus-img {
+        display: block;
+        position: relative;
+        height: 40%;
+        width: 40%;
+        left: 300px;
+        bottom: 400px;
+        border-radius: 20px;
+    }
+}
+
+
+/* PC MEDIA QUERY END */
